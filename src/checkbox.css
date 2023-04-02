@@ -1,0 +1,152 @@
+
+.real-checkbox-2 {  
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.init {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #EB455F;
+  border-radius: 5px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
+
+.out-1 {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./res/галка.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+  /* transition: 0.2s ease-in; */
+  animation: 0.2s ao1;
+  animation-fill-mode: forwards;
+}
+
+.out-2 {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./res/галка.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+  /* transition: 0.2s ease-in; */
+  animation: 0.2s ao2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ao1 {
+  0% {
+    transform: translate(-65%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes ao2 {
+  0% {
+    transform: translate(-35%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.click-1 {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./res/галка.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+  animation: 0.2s a1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes a1 {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.click-2 {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./res/галка.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+  animation: 0.2s a21;
+  animation-fill-mode: forwards;
+}
+
+.click-2-2 {
+  z-index: 2;
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./res/галка.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+
+  animation: 0.2s a22;
+  animation-fill-mode: forwards;
+}
+
+@keyframes a21 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-67%, -50%);
+  }
+}
+
+@keyframes a22 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-35%, -50%);
+  }
+}
+
+.real-checkbox-2:focus + .init {
+  box-shadow: 0px 0px 10px #EB455F;
+}

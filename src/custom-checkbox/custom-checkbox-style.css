@@ -1,0 +1,127 @@
+.custom-checkbox--real-checkbox {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.custom-checkbox--main-container {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #EB455F;
+  border-radius: 5px;
+  margin-right: 5px;
+  vertical-align: sub;
+
+}
+
+.custom-checkbox--real-checkbox:focus + .custom-checkbox--main-container {
+  box-shadow: 0px 0px 10px #EB455F;
+}
+
+.custom-checkbox--first-state-in,
+.custom-checkbox--second-state-left-in,
+.custom-checkbox--second-state-right-in,
+.custom-checkbox--first-state-out,
+.custom-checkbox--second-state-left-out,
+.custom-checkbox--second-state-right-out {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('./check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1px;
+}
+
+.custom-checkbox--first-state-in {
+  animation: 0.2s custom-checkbox--fisrst-state-in-animation;
+  animation-fill-mode: forwards;
+}
+
+.custom-checkbox--second-state-left-in {
+  animation: 0.2s custom-checkbox--second-state-left-in-animation;
+  animation-fill-mode: forwards;
+}
+
+.custom-checkbox--second-state-right-in {
+  z-index: 2;
+  animation: 0.2s custom-checkbox--second-state-right-in-animation;
+  animation-fill-mode: forwards;
+}
+
+.custom-checkbox--first-state-out {
+  animation: 0.2s custom-checkbox--first-state-left-out-animation;
+  animation-fill-mode: forwards;
+}
+
+.custom-checkbox--second-state-left-out {  
+  animation: 0.2s custom-checkbox--second-state-left-out-animation;
+  animation-fill-mode: forwards;
+}
+
+.custom-checkbox--second-state-right-out {
+  animation: 0.2s custom-checkbox--second-stateright-out-animation;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes custom-checkbox--fisrst-state-in-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes custom-checkbox--second-state-left-in-animation {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-66%, -50%);
+  }
+}
+
+@keyframes custom-checkbox--second-state-right-in-animation {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-33%, -50%);
+  }
+}
+
+@keyframes custom-checkbox--first-state-left-out-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes custom-checkbox--second-state-left-out-animation {
+  0% {
+    transform: translate(-66%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes custom-checkbox--second-stateright-out-animation {
+  0% {
+    transform: translate(-33%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
