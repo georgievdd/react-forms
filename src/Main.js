@@ -1,20 +1,33 @@
 import React from 'react';
 import './containers.css';
-import Test from './test';
-import CheckboxDouble from './custom-checkbox/CheckboxDouble';
-import Checkbox from './custom-checkbox/Checkbox';
+import Radio from './custom-input-forms/radio/Radio';
+import Checkbox from './custom-input-forms/checkbox/Checkbox';
+import CheckboxDouble from './custom-input-forms/checkbox/CheckboxDouble';
 
 const Main = () => {
   return (
     <div className='main-container'>
-      
-      <CheckboxDouble 
-        label="double"
-        stateForced={2}
+      <Radio 
+        label="text" 
+        onChange={function(){}}
+        name="test"
+        id={1}
       />
-      <div style={{height: "10px"}}></div>
+      <Radio 
+        label="text" 
+        onChange={function(){}}
+        name="test"
+        id={2}
+      />
+
       <Checkbox 
-        label="mono"
+        label="text"
+        onChange={()=>{}}
+      />
+
+      <CheckboxDouble 
+        label="text"
+        onChange={()=>{}}
       />
 
 

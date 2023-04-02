@@ -31,7 +31,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url('./check.svg');
+  background-image: url('./../check.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;

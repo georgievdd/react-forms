@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './custom-checkbox-style.css';
 
-const Checkbox = props => {
-
-  const {
-    label,
-    onChange,
-  } = props;
+const Checkbox = ({
+  label,
+  onChange,
+}) => {
 
   const [state, setState] = useState(0);
   const [className, setClassName] = useState('');
@@ -31,21 +29,17 @@ const Checkbox = props => {
   }, [state]);
 
   useEffect(() => {
-    if (onChange) {
-      onChange(state % 2);
-    }
+    onChange(state % 2);
   }, [state]);
 
   return (
-    <div onClick={e => onClick(e)}>
-      <label>
-        <input type="checkbox" className='custom-checkbox--real-checkbox'/>
-        <span className='custom-checkbox--main-container'>
-          <span className={className} />
-        </span>
-        {label}
-      </label>
-    </div>
+    <label onClick={e => onClick(e)}>
+      <input type="checkbox" className='custom-checkbox--real-checkbox'/>
+      <span className='custom-checkbox--main-container'>
+        <span className={className} />
+      </span>
+      {label}
+    </label>
   )
 }
 
