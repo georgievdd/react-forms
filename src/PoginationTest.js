@@ -16,7 +16,7 @@ const PaginationTest = () => {
 
   const [currentCount, setCurrentCount] = useState(0);
   const totalCount = Math.floor(arrayData.length / onPageCount);
-  const renderCount = 11;
+  const renderCount = 9;
   const [onPageArray, setArray] = useState([]);
 
   useEffect(() => {
